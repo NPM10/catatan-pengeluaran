@@ -12,13 +12,18 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 });
 
 async function kirimData(data) {
-  const res = await fetch(baseURL, {
+  await fetch(baseURL, {
     method: "POST",
+    mode: "no-cors",
     body: JSON.stringify(data),
-    headers: { "Content-Type": "application/json" }
+    headers: {
+      "Content-Type": "text/plain"
+    }
   });
-  return res.json();
+
+  return { balasan: "Data terkirim (cek Google Sheet)" };
 }
+
 
 document.getElementById("formInput").addEventListener("submit", async e => {
   e.preventDefault();
@@ -44,3 +49,4 @@ document.getElementById("rekapBulan").addEventListener("click", async () => {
   const resp = await kirimData({ message: { text: "rekap bulan" } });
   document.getElementById("output").innerText = resp.balasan;
 });
+
