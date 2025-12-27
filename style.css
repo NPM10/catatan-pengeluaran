@@ -1,0 +1,5 @@
+body { font-family: sans-serif; margin:20px; }
+form input, form select, form button { margin:5px 0; padding:5px; }
+button { padding:5px 10px; margin:5px 2px; }
+#output { margin-top:15px; white-space: pre-line; }
+#loginDiv { max-width:300px; margin:auto; text-align:center; }

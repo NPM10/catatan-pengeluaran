@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catatan Pengeluaran</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div id="loginDiv">
+    <h2>Masuk dengan Password</h2>
+    <input type="password" id="password" placeholder="Masukkan password">
+    <button id="loginBtn">Login</button>
+    <p id="loginMsg" style="color:red;"></p>
+  </div>
+
+  <div id="app" style="display:none;">
+    <h1>Catatan Pengeluaran</h1>
+    <form id="formInput">
+      <select id="tipe">
+        <option value="+">Pemasukan</option>
+        <option value="-">Pengeluaran</option>
+      </select>
+      <input type="text" id="kategori" placeholder="Kategori" required>
+      <input type="number" id="jumlah" placeholder="Jumlah" required>
+      <button type="submit">Simpan</button>
+    </form>
+
+    <button id="cekSaldo">Cek Saldo</button>
+    <button id="rekap">Rekap Kategori</button>
+    <button id="rekapBulan">Rekap Bulanan</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
